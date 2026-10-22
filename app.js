@@ -861,6 +861,7 @@ function escapeHtml(str) {
    ========================================================================== */
 function initResumeModal() {
   const resumeBtn = document.getElementById('resume-btn');
+  const viewResumeHero = document.getElementById('view-resume-hero');
   const modal = document.getElementById('resume-modal');
   const backdrop = document.getElementById('resume-backdrop');
   const closeBtn = document.getElementById('close-resume-btn');
@@ -877,6 +878,7 @@ function initResumeModal() {
   }
 
   if (resumeBtn) resumeBtn.addEventListener('click', openResume);
+  if (viewResumeHero) viewResumeHero.addEventListener('click', openResume);
   if (closeBtn) closeBtn.addEventListener('click', closeResume);
   if (backdrop) backdrop.addEventListener('click', closeResume);
 
