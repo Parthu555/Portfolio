@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K. Parthasarathi | AI & ML Engineer | Cloud & Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of K. Parthasarathi — Computer Science Engineering (AI & ML) at SRMIST. Specializing in Reinforcement Learning, RAG, Healthcare AI, and AWS Cloud Architectures.">
+  <meta name="keywords" content="K Parthasarathi, Parthasarathi SRM, AI Engineer, Machine Learning Portfolio, DeepCare, AeroHeal, DiabetaNet, AWS Certified Developer">
+  <meta name="author" content="K. Parthasarathi">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="K. Parthasarathi — AI/ML & Cloud Portfolio">
+  <meta property="og:description" content="Explore AI systems, Reinforcement Learning, Cloud Deployments, and Research by K. Parthasarathi.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <!-- Interactive Background Canvas -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Notification Toast Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Parthasarathi Home">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">Parthasarathi</span>
+        <span class="logo-accent">.ai</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#playground" class="nav-link highlight-link">AI Labs</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#certifications" class="nav-link">Certs</a>
+        <a href="#achievements" class="nav-link">Research</a>
+        <a href="#terminal" class="nav-link">Terminal</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="resume-btn" class="btn btn-secondary btn-sm" aria-label="View Resume">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Resume</span>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">Let's Talk</a>
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Expected Grad: 2027 • Open for SDE &amp; AI/ML Roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">K. Parthasarathi</span>
+          </h1>
+
+          <div class="typing-container">
+            <span class="typing-prefix">I architect &amp; build </span>
+            <span id="typing-text" class="typing-text"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            Computer Science student (AI &amp; ML) at <strong>SRM Institute of Science and Technology</strong> (CGPA: 8.65). 
+            Passionate about building production-ready AI systems, Reinforcement Learning pipelines, explainable ML, and scalable cloud architectures on AWS.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary btn-glow">
+              <span>View Projects</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#playground" class="btn btn-secondary">
+              <svg class="icon pulse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <span>Test Interactive AI Labs</span>
+            </a>
+            <button id="copy-email-hero" class="btn btn-ghost" title="Copy Email">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>k7sarathi@gmail.com</span>
+            </button>
+          </div>
+
+          <div class="social-links-bar">
+            <a href="https://github.com/Parthu555" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>github.com/Parthu555</span>
+            </a>
+            <a href="https://linkedin.com/in/parthasarathi-k-srm" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>linkedin.com/in/parthasarathi-k-srm</span>
+            </a>
+            <a href="tel:+917396582230" class="social-link" aria-label="Phone Number">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+91 73965 82230</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Metric Bento Grid -->
+        <div class="hero-bento">
+          <div class="bento-card bento-glow">
+            <div class="bento-badge">Featured Paper</div>
+            <h3>IEEE ICAIHC '26</h3>
+            <p>Authored &amp; presented research on ensemble blood sugar prediction at NIT Raipur.</p>
+            <div class="bento-footer">NIT Raipur • IEEE Xplore Track</div>
+          </div>
+
+          <div class="bento-card">
+            <div class="metric-num">8.65</div>
+            <div class="metric-label">SRMIST CGPA</div>
+            <div class="metric-sub">B.Tech CSE (AI &amp; ML) 2023–2027</div>
+          </div>
+
+          <div class="bento-card">
+            <div class="metric-num">97.43%</div>
+            <div class="metric-label">DiabetaNet Accuracy</div>
+            <div class="metric-sub">Soft-Voting Ensemble on 100k Patients</div>
+          </div>
+
+          <div class="bento-card">
+            <div class="metric-num">300K+</div>
+            <div class="metric-label">RL Environment Steps</div>
+            <div class="metric-sub">AeroHeal Autonomous PPO Self-Healing</div>
+          </div>
+
+          <div class="bento-card bento-wide">
+            <div class="cert-chips">
+              <span class="chip chip-aws">AWS Certified Dev</span>
+              <span class="chip chip-sap">SAP GenAI</span>
+              <span class="chip chip-salesforce">Agentforce AI</span>
+              <span class="chip chip-iit">IIT KGP NPTEL</span>
+            </div>
+            <div class="metric-sub" style="margin-top: 8px;">Industry-validated credentials in Cloud, AI Agents, &amp; Applied ML</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & EDUCATION SECTION -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// Background</span>
+          <h2 class="section-title">About &amp; Academic Journey</h2>
+          <p class="section-subtitle">Bridging theoretical machine learning with bulletproof cloud engineering.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-bio-card">
+            <h3 class="card-heading">Engineering Mindset</h3>
+            <p>
+              I am an AI and Machine Learning engineer currently in my undergraduate journey at <strong>SRM Institute of Science and Technology, Kattankulathur</strong>. 
+              My work focuses on architecting end-to-end intelligent systems: from low-level algorithms and reinforcement learning policies to full-stack microservices deployed on AWS with high availability, security, and continuous delivery.
+            </p>
+            <p>
+              Whether it's building medical diagnostic assistants using deep convolutional networks (DenseNet-121) with explainable Grad-CAM heatmaps, creating autonomous self-healing server agents with PPO, or implementing enterprise Retrieval-Augmented Generation (RAG) pipelines, I obsess over measurable impact, interpretability, and robust software architecture.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">⚡</span>
+                <div>
+                  <strong>End-to-End AI Engineering</strong>
+                  <p>From data ingestion and model training to containerized FastAPI microservices and Terraform IAC.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🔍</span>
+                <div>
+                  <strong>Model Interpretability &amp; Safety</strong>
+                  <p>Extensive experience with SHAP values, Grad-CAM feature attribution, SMOTE balancing, and strict HIPAA/security auditing.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">☁️</span>
+                <div>
+                  <strong>Cloud-Native Deployment</strong>
+                  <p>Certified AWS Developer with hands-on VPC, EC2 Auto Scaling, ALB, RDS, KMS, IAM, and Docker CI/CD pipelines.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="education-timeline-card">
+            <h3 class="card-heading">Education History</h3>
+            
+            <div class="timeline">
+              <div class="timeline-item active">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <div class="timeline-badge">2023 — 2027</div>
+                  <h4 class="timeline-title">B.Tech, Computer Science Engineering (AI &amp; ML)</h4>
+                  <div class="timeline-school">SRM Institute of Science &amp; Technology, Kattankulathur</div>
+                  <div class="timeline-score">
+                    <span>CGPA: <strong>8.65 / 10</strong></span>
+                    <span class="pill pill-success">Current</span>
+                  </div>
+                  <p class="timeline-desc">Specializing in AI/ML architectures, Deep Learning, RL, Data Structures, and Cloud Computing.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <div class="timeline-badge">2022 — 2023</div>
+                  <h4 class="timeline-title">Grade XII — TS BIE (Intermediate)</h4>
+                  <div class="timeline-school">Page Junior College, Kompally</div>
+                  <div class="timeline-score">
+                    <span>Score: <strong>97.7%</strong></span>
+                    <span class="pill pill-accent">Top 1% Rank</span>
+                  </div>
+                  <p class="timeline-desc">Mathematics, Physics, and Chemistry excellence.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <div class="timeline-badge">2020 — 2021</div>
+                  <h4 class="timeline-title">Grade X — TS SSC (Secondary School)</h4>
+                  <div class="timeline-school">Trinity Model Secondary School, Peddapelli</div>
+                  <div class="timeline-score">
+                    <span>Score: <strong>100.0%</strong></span>
+                    <span class="pill pill-gold">Perfect Score 10/10 GPA</span>
+                  </div>
+                  <p class="timeline-desc">Ranked 1st in institution with flawless academic record.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// Portfolio Works</span>
+          <h2 class="section-title">Engineered Projects</h2>
+          <p class="section-subtitle">Real-world AI systems, reinforcement learning agents, and production-grade deployments.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="ai-health">Healthcare &amp; Vision</button>
+          <button class="filter-btn" data-filter="rl-systems">Reinforcement Learning</button>
+          <button class="filter-btn" data-filter="rag-nlp">GenAI &amp; RAG</button>
+          <button class="filter-btn" data-filter="cloud">Cloud &amp; DevOps</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project 1: DeepCare -->
+          <article class="project-card" data-category="ai-health cloud" data-id="deepcare">
+            <div class="project-header">
+              <span class="project-tag">Full-Stack Cloud &amp; AI</span>
+              <span class="project-metric">14 Pathologies</span>
+            </div>
+            <h3 class="project-title">DeepCare — Cloud Healthcare Platform with AI Chest X-Ray Analysis</h3>
+            <p class="project-summary">
+              Enterprise clinical diagnostic platform featuring patient, doctor, and admin portals. Uploads chest radiographs, performs DenseNet-121 inference with explainable Grad-CAM heatmaps, and creates digitally signed PDF medical reports.
+            </p>
+            <div class="project-highlights">
+              <div>• <strong>DenseNet-121 &amp; Grad-CAM:</strong> Trained on NIH ChestX-ray14 with visual localization of anomalies.</div>
+              <div>• <strong>Zero-Trust Backend:</strong> FastAPI with JWT role-based access, Argon2 password hashing, and HIPAA-compliant audit logging.</div>
+              <div>• <strong>AWS IAC:</strong> Deployed via Terraform with VPC, Auto Scaling EC2, ALB, RDS PostgreSQL, KMS-encrypted S3, and GitHub Actions CI/CD.</div>
+            </div>
+            <div class="project-tech-stack">
+              <span>Python</span><span>FastAPI</span><span>React</span><span>TypeScript</span><span>PyTorch</span><span>PostgreSQL</span><span>AWS</span><span>Terraform</span><span>Docker</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-sm btn-primary project-modal-trigger" data-project="deepcare">Detailed Case Study</button>
+              <a href="https://github.com/Parthu555" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">GitHub</a>
+            </div>
+          </article>
+
+          <!-- Project 2: AeroHeal -->
+          <article class="project-card" data-category="rl-systems cloud" data-id="aeroheal">
+            <div class="project-header">
+              <span class="project-tag">Autonomous RL Infrastructure</span>
+              <span class="project-metric">300k Telemetry Steps</span>
+            </div>
+            <h3 class="project-title">AeroHeal — Autonomous Server Remediation via Reinforcement Learning</h3>
+            <p class="project-summary">
+              Self-healing infrastructure pipeline using Proximal Policy Optimization (PPO) to monitor 4D server telemetry (CPU, Memory, Disk I/O, Latency) and autonomously trigger proactive interventions before system crash.
+            </p>
+            <div class="project-highlights">
+              <div>• <strong>Custom Gym Environment:</strong> Designed continuous stochastic telemetry stream simulating noisy production workloads.</div>
+              <div>• <strong>PPO Policy Optimization:</strong> Prioritized proactive load rebalancing over reactive crash recovery, eliminating manual threshold alert fatigue.</div>
+              <div>• <strong>SLA Constraint Satisfaction:</strong> Maintained 99.9% uptime throughout 300,000 steps of stress testing.</div>
+            </div>
+            <div class="project-tech-stack">
+              <span>Python</span><span>PyTorch</span><span>Stable-Baselines3</span><span>OpenAI Gym</span><span>PPO</span><span>NumPy</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-sm btn-primary project-modal-trigger" data-project="aeroheal">Detailed Case Study</button>
+              <a href="https://github.com/Parthu555" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">GitHub</a>
+            </div>
+          </article>
+
+          <!-- Project 3: RAG Document Assistant -->
+          <article class="project-card" data-category="rag-nlp" data-id="rag-assistant">
+            <div class="project-header">
+              <span class="project-tag">GenAI &amp; Information Retrieval</span>
+              <span class="project-metric">95% Accuracy</span>
+            </div>
+            <h3 class="project-title">RAG-Based Intelligent Document Assistant</h3>
+            <p class="project-summary">
+              Production Retrieval-Augmented Generation system allowing researchers and analysts to query dense multidimensional PDF repositories with contextual fidelity and citations.
+            </p>
+            <div class="project-highlights">
+              <div>• <strong>High Precision Ingestion:</strong> Chunking, tokenization, and vectorization pipeline using LangChain and OpenAI embeddings.</div>
+              <div>• <strong>FAISS Semantic Search:</strong> Millisecond vector index retrieval outperforming traditional BM25/keyword engines.</div>
+              <div>• <strong>Streamlit Frontend:</strong> Interactive UI highlighting retrieved source chunks and confidence metrics.</div>
+            </div>
+            <div class="project-tech-stack">
+              <span>Python</span><span>LangChain</span><span>OpenAI API</span><span>FAISS</span><span>Streamlit</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-sm btn-primary project-modal-trigger" data-project="rag-assistant">Detailed Case Study</button>
+              <a href="#playground" class="btn btn-sm btn-outline">Test Live Demo</a>
+            </div>
+          </article>
+
+          <!-- Project 4: DiabetaNet -->
+          <article class="project-card" data-category="ai-health" data-id="diabetanet">
+            <div class="project-header">
+              <span class="project-tag">Clinical Ensemble ML</span>
+              <span class="project-metric">97.43% Accuracy</span>
+            </div>
+            <h3 class="project-title">DiabetaNet — Diabetes Prediction &amp; SHAP Explainability</h3>
+            <p class="project-summary">
+              Hybrid soft-voting ensemble model integrating Random Forest, XGBoost, and Support Vector Machines trained over 100,000 patient records with interactive SHAP interpretability.
+            </p>
+            <div class="project-highlights">
+              <div>• <strong>Data Engineering:</strong> SMOTE synthetic sampling for skewed medical distributions + Z-score normalization.</div>
+              <div>• <strong>SHAP Interpretability:</strong> Granular feature attribution charts showing exact biomarker impact on individual risk scores.</div>
+              <div>• <strong>Streamlit Clinic App:</strong> Patient record search, risk classification, and customized nutritional recommendations.</div>
+            </div>
+            <div class="project-tech-stack">
+              <span>Python</span><span>Scikit-learn</span><span>XGBoost</span><span>SHAP</span><span>SMOTE</span><span>Streamlit</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-sm btn-primary project-modal-trigger" data-project="diabetanet">Detailed Case Study</button>
+              <a href="#playground" class="btn btn-sm btn-outline">Test Predictor</a>
+            </div>
+          </article>
+
+          <!-- Project 5: Malpractice Detection -->
+          <article class="project-card" data-category="ai-health" data-id="malpractice">
+            <div class="project-header">
+              <span class="project-tag">Computer Vision &amp; Real-Time</span>
+              <span class="project-metric">Real-Time Streams</span>
+            </div>
+            <h3 class="project-title">AI-Based Online Exam Malpractice Detection System</h3>
+            <p class="project-summary">
+              Computer-vision proctoring engine monitoring candidate video streams during remote examinations to automatically detect head deviation, secondary devices, and multiple persons.
+            </p>
+            <div class="project-highlights">
+              <div>• <strong>FastAPI Streaming:</strong> Asynchronous REST and WebSocket endpoints for high-throughput frame ingestion.</div>
+              <div>• <strong>OpenCV Facial Tracking:</strong> Gaze estimation, head-pose orientation, and suspicious motion event triggering.</div>
+              <div>• <strong>Automated Incident Logging:</strong> Instant alerts dispatched to proctors with timestamped frame evidence.</div>
+            </div>
+            <div class="project-tech-stack">
+              <span>Python</span><span>FastAPI</span><span>OpenCV</span><span>NumPy</span><span>WebSockets</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-sm btn-primary project-modal-trigger" data-project="malpractice">Detailed Case Study</button>
+              <a href="https://github.com/Parthu555" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">GitHub</a>
+            </div>
+          </article>
+
+          <!-- Project 6: AWS AI Chatbot -->
+          <article class="project-card" data-category="cloud rag-nlp" data-id="aws-chatbot">
+            <div class="project-header">
+              <span class="project-tag">Cloud Infrastructure</span>
+              <span class="project-metric">Production Scalable</span>
+            </div>
+            <h3 class="project-title">Enterprise AI Chatbot Deployment on AWS</h3>
+            <p class="project-summary">
+              Highly scalable and resilient cloud deployment of an interactive AI conversational agent leveraging core Amazon Web Services infrastructure and IAM security best practices.
+            </p>
+            <div class="project-highlights">
+              <div>• <strong>EC2 Compute:</strong> Tuned compute instance with systemd daemon management and reverse proxy routing.</div>
+              <div>• <strong>S3 &amp; IAM Security:</strong> Multi-tier S3 storage for conversation histories with least-privilege IAM roles.</div>
+              <div>• <strong>Resilient Operations:</strong> CloudWatch metric alarms and automatic restart hooks for 99.9% reliability.</div>
+            </div>
+            <div class="project-tech-stack">
+              <span>AWS EC2</span><span>Amazon S3</span><span>AWS IAM</span><span>Python</span><span>Linux</span><span>Nginx</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-sm btn-primary project-modal-trigger" data-project="aws-chatbot">Detailed Case Study</button>
+              <a href="https://github.com/Parthu555" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE AI LABS / PLAYGROUND -->
+    <section id="playground" class="section playground-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// Interactive Experience</span>
+          <h2 class="section-title">Parthasarathi's AI Labs</h2>
+          <p class="section-subtitle">Experience live simulations of my core engineering architectures right in your browser.</p>
+        </div>
+
+        <div class="lab-container">
+          <!-- Lab Navigation Tabs -->
+          <div class="lab-tabs">
+            <button class="lab-tab active" data-tab="rag-lab">
+              <span class="lab-icon">⚡</span>
+              <span>RAG Assistant Simulator</span>
+            </button>
+            <button class="lab-tab" data-tab="shap-lab">
+              <span class="lab-icon">📊</span>
+              <span>DiabetaNet &amp; SHAP</span>
+            </button>
+            <button class="lab-tab" data-tab="rl-lab">
+              <span class="lab-icon">🤖</span>
+              <span>AeroHeal PPO Telemetry</span>
+            </button>
+          </div>
+
+          <!-- Lab 1: RAG Simulator -->
+          <div class="lab-content active" id="rag-lab">
+            <div class="lab-card">
+              <div class="lab-header">
+                <div>
+                  <h4>Retrieval-Augmented Generation (RAG) Query Simulator</h4>
+                  <p>Test semantic retrieval across Parthasarathi's technical knowledge base using vector similarity scoring.</p>
+                </div>
+                <span class="pill pill-accent">FAISS + Cosine Sim</span>
+              </div>
+
+              <div class="lab-body">
+                <div class="query-box">
+                  <label for="rag-input">Select or type a technical query:</label>
+                  <div class="query-input-wrap">
+                    <input type="text" id="rag-input" value="How does AeroHeal prevent server crashes using PPO?" placeholder="Ask something about Parthasarathi's architectures...">
+                    <button id="rag-run-btn" class="btn btn-primary">Run Query</button>
+                  </div>
+                  <div class="sample-queries">
+                    <span>Try:</span>
+                    <button class="sample-chip" data-q="How does AeroHeal prevent server crashes using PPO?">AeroHeal PPO architecture</button>
+                    <button class="sample-chip" data-q="What is the accuracy of DiabetaNet and how was it achieved?">DiabetaNet 97.43% Ensemble</button>
+                    <button class="sample-chip" data-q="What AWS services did Parthasarathi use in DeepCare?">DeepCare AWS Terraform stack</button>
+                    <button class="sample-chip" data-q="What certifications does Parthasarathi hold?">AWS &amp; SAP Certifications</button>
+                  </div>
+                </div>
+
+                <div class="rag-results" id="rag-output">
+                  <div class="rag-chunk">
+                    <div class="chunk-header">
+                      <span class="chunk-badge">Vector Chunk #1 • Cosine Similarity: <strong>0.962</strong></span>
+                      <span class="source-tag">Source: AeroHeal_Architecture_Doc.pdf</span>
+                    </div>
+                    <p class="chunk-text">"AeroHeal deploys a continuous Proximal Policy Optimization (PPO) agent inside a custom OpenAI Gym environment. By continuously processing 4-dimensional system telemetry (CPU load, memory allocation, network latency, and disk I/O), the agent observes state transitions and selects preemptive balancing actions before resource exhaustion causes an SLA penalty or service crash."</p>
+                  </div>
+
+                  <div class="rag-answer">
+                    <div class="answer-badge">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                      <span>Synthesized RAG Response</span>
+                    </div>
+                    <p id="rag-response-text">
+                      AeroHeal uses a PPO-based reinforcement learning policy trained on 300,000 continuous telemetry steps. Rather than waiting for hard thresholds to trigger alarms, the agent predicts trajectory failure states and proactively rebalances workloads across the server cluster, successfully preserving 99.9% uptime SLA constraints.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lab 2: DiabetaNet SHAP Simulator -->
+          <div class="lab-content" id="shap-lab">
+            <div class="lab-card">
+              <div class="lab-header">
+                <div>
+                  <h4>DiabetaNet ML Prediction &amp; SHAP Feature Attribution</h4>
+                  <p>Adjust clinical parameters to observe real-time soft-voting probability and SHAP explainability bars.</p>
+                </div>
+                <span class="pill pill-success">RF + XGBoost + SVM Soft-Voting</span>
+              </div>
+
+              <div class="lab-body lab-grid-split">
+                <div class="lab-controls">
+                  <div class="control-group">
+                    <label for="input-glucose">Fasting Blood Glucose: <span id="val-glucose">145</span> mg/dL</label>
+                    <input type="range" id="input-glucose" min="70" max="220" value="145" step="1">
+                  </div>
+                  <div class="control-group">
+                    <label for="input-bmi">Body Mass Index (BMI): <span id="val-bmi">28.4</span> kg/m²</label>
+                    <input type="range" id="input-bmi" min="16.0" max="45.0" value="28.4" step="0.1">
+                  </div>
+                  <div class="control-group">
+                    <label for="input-age">Patient Age: <span id="val-age">42</span> years</label>
+                    <input type="range" id="input-age" min="18" max="85" value="42" step="1">
+                  </div>
+                  <div class="control-group">
+                    <label for="input-hba1c">HbA1c Level: <span id="val-hba1c">6.8</span>%</label>
+                    <input type="range" id="input-hba1c" min="4.5" max="11.0" value="6.8" step="0.1">
+                  </div>
+                </div>
+
+                <div class="lab-visualization">
+                  <div class="prediction-banner">
+                    <div class="pred-title">Ensemble Model Assessment:</div>
+                    <div class="pred-result" id="shap-pred-badge">Elevated Risk (78.4%)</div>
+                  </div>
+
+                  <div class="shap-chart">
+                    <div class="shap-title">SHAP Value Attribution (+ / - Impact on Probability):</div>
+                    <div class="shap-bar-item">
+                      <div class="bar-label"><span>HbA1c (6.8%)</span><span id="shap-hba1c-val">+0.32</span></div>
+                      <div class="bar-track"><div class="bar-fill bar-pos" id="bar-hba1c" style="width: 72%;"></div></div>
+                    </div>
+                    <div class="shap-bar-item">
+                      <div class="bar-label"><span>Blood Glucose (145)</span><span id="shap-glucose-val">+0.26</span></div>
+                      <div class="bar-track"><div class="bar-fill bar-pos" id="bar-glucose" style="width: 58%;"></div></div>
+                    </div>
+                    <div class="shap-bar-item">
+                      <div class="bar-label"><span>BMI (28.4)</span><span id="shap-bmi-val">+0.14</span></div>
+                      <div class="bar-track"><div class="bar-fill bar-pos" id="bar-bmi" style="width: 38%;"></div></div>
+                    </div>
+                    <div class="shap-bar-item">
+                      <div class="bar-label"><span>Age (42)</span><span id="shap-age-val">+0.06</span></div>
+                      <div class="bar-track"><div class="bar-fill bar-pos" id="bar-age" style="width: 22%;"></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lab 3: AeroHeal PPO Simulator -->
+          <div class="lab-content" id="rl-lab">
+            <div class="lab-card">
+              <div class="lab-header">
+                <div>
+                  <h4>AeroHeal Autonomous Telemetry &amp; Self-Healing Agent</h4>
+                  <p>Trigger traffic surges to watch the PPO agent execute autonomous remediation in real-time.</p>
+                </div>
+                <span class="pill pill-accent">Stable-Baselines3 PPO</span>
+              </div>
+
+              <div class="lab-body">
+                <div class="telemetry-dashboard">
+                  <div class="telemetry-meters">
+                    <div class="meter-card">
+                      <div class="meter-label">CPU Load</div>
+                      <div class="meter-val" id="cpu-val">42%</div>
+                      <div class="meter-bar"><div class="meter-fill" id="cpu-fill" style="width: 42%;"></div></div>
+                    </div>
+                    <div class="meter-card">
+                      <div class="meter-label">RAM Usage</div>
+                      <div class="meter-val" id="mem-val">58%</div>
+                      <div class="meter-bar"><div class="meter-fill" id="mem-fill" style="width: 58%;"></div></div>
+                    </div>
+                    <div class="meter-card">
+                      <div class="meter-label">Latency</div>
+                      <div class="meter-val" id="lat-val">48ms</div>
+                      <div class="meter-bar"><div class="meter-fill" id="lat-fill" style="width: 24%;"></div></div>
+                    </div>
+                    <div class="meter-card">
+                      <div class="meter-label">Agent State</div>
+                      <div class="meter-val status-green" id="rl-state">STABLE</div>
+                      <div class="meter-status">Policy: Proactive Idle</div>
+                    </div>
+                  </div>
+
+                  <div class="telemetry-actions">
+                    <button id="surge-btn" class="btn btn-warning">Inject 500% Traffic Surge</button>
+                    <button id="reset-rl-btn" class="btn btn-ghost">Reset Telemetry</button>
+                  </div>
+
+                  <div class="agent-log-box" id="agent-logs">
+                    <div class="log-line">[RL-ENV] Initializing Gym server telemetry environment... Status: OK</div>
+                    <div class="log-line">[PPO-AGENT] Observation vector: [CPU: 0.42, MEM: 0.58, LAT: 48, IO: 0.22]</div>
+                    <div class="log-line">[REMEDY] Policy output: Maintain current node affinity. Target SLA met.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// Technical Arsenal</span>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+          <p class="section-subtitle">A comprehensive breakdown of tools, frameworks, and methodologies I leverage daily.</p>
+        </div>
+
+        <div class="skills-category-grid">
+          <!-- AI & ML -->
+          <div class="skill-group-card">
+            <div class="skill-group-header">
+              <span class="skill-icon">🧠</span>
+              <h3>Artificial Intelligence &amp; ML</h3>
+            </div>
+            <ul class="skill-list">
+              <li>
+                <span>Reinforcement Learning (PPO, Policy Gradients)</span>
+                <span class="skill-level">Advanced</span>
+              </li>
+              <li>
+                <span>Supervised &amp; Unsupervised Learning</span>
+                <span class="skill-level">Expert</span>
+              </li>
+              <li>
+                <span>Ensemble ML (Random Forest, XGBoost, SVM)</span>
+                <span class="skill-level">Expert</span>
+              </li>
+              <li>
+                <span>Model Interpretability (SHAP, Grad-CAM)</span>
+                <span class="skill-level">Advanced</span>
+              </li>
+              <li>
+                <span>Retrieval-Augmented Generation (RAG) &amp; FAISS</span>
+                <span class="skill-level">Advanced</span>
+              </li>
+              <li>
+                <span>Computer Vision &amp; Image Classification</span>
+                <span class="skill-level">Proficient</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Frameworks & Libraries -->
+          <div class="skill-group-card">
+            <div class="skill-group-header">
+              <span class="skill-icon">📦</span>
+              <h3>Frameworks &amp; Libraries</h3>
+            </div>
+            <ul class="skill-list">
+              <li>
+                <span>PyTorch &amp; TorchVision</span>
+                <span class="skill-level">Proficient</span>
+              </li>
+              <li>
+                <span>Stable-Baselines3 &amp; OpenAI Gym</span>
+                <span class="skill-level">Advanced</span>
+              </li>
+              <li>
+                <span>Scikit-learn, Pandas, NumPy</span>
+                <span class="skill-level">Expert</span>
+              </li>
+              <li>
+                <span>LangChain &amp; OpenAI API</span>
+                <span class="skill-level">Advanced</span>
+              </li>
+              <li>
+                <span>Streamlit &amp; Flask</span>
+                <span class="skill-level">Expert</span>
+              </li>
+              <li>
+                <span>FastAPI &amp; Uvicorn</span>
+                <span class="skill-level">Advanced</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cloud & DevOps -->
+          <div class="skill-group-card">
+            <div class="skill-group-header">
+              <span class="skill-icon">☁️</span>
+              <h3>Cloud &amp; DevOps</h3>
+            </div>
+            <ul class="skill-list">
+              <li>
+                <span>Amazon Web Services (EC2, S3, IAM, ALB, VPC)</span>
+                <span class="skill-level">AWS Certified</span>
+              </li>
+              <li>
+                <span>Docker &amp; Containerization</span>
+                <span class="skill-level">Proficient</span>
+              </li>
+              <li>
+                <span>Terraform (Infrastructure as Code)</span>
+                <span class="skill-level">Proficient</span>
+              </li>
+              <li>
+                <span>GitHub Actions CI/CD</span>
+                <span class="skill-level">Proficient</span>
+              </li>
+              <li>
+                <span>CloudWatch &amp; AWS KMS Security</span>
+                <span class="skill-level">Advanced</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Programming & Web Technologies -->
+          <div class="skill-group-card">
+            <div class="skill-group-header">
+              <span class="skill-icon">💻</span>
+              <h3>Languages &amp; Web Stack</h3>
+            </div>
+            <ul class="skill-list">
+              <li>
+                <span>Python (Primary Language)</span>
+                <span class="skill-level">Expert</span>
+              </li>
+              <li>
+                <span>C / C++ (Algorithms &amp; Systems)</span>
+                <span class="skill-level">Advanced</span>
+              </li>
+              <li>
+                <span>React &amp; Modern JavaScript</span>
+                <span class="skill-level">Proficient</span>
+              </li>
+              <li>
+                <span>TypeScript</span>
+                <span class="skill-level">Proficient</span>
+              </li>
+              <li>
+                <span>HTML5 / Modern CSS3</span>
+                <span class="skill-level">Expert</span>
+              </li>
+              <li>
+                <span>PostgreSQL &amp; MySQL</span>
+                <span class="skill-level">Advanced</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// Verified Credentials</span>
+          <h2 class="section-title">Industry Certifications</h2>
+          <p class="section-subtitle">Globally recognized accreditations validating expertise across Cloud, AI, and Architecture.</p>
+        </div>
+
+        <div class="certifications-grid">
+          <!-- AWS -->
+          <div class="cert-card cert-featured">
+            <div class="cert-card-header">
+              <div class="cert-issuer-badge aws-badge">AWS</div>
+              <span class="cert-date">April 2026</span>
+            </div>
+            <h3 class="cert-name">AWS Certified Developer – Associate</h3>
+            <div class="cert-org">Amazon Web Services (AWS)</div>
+            <p class="cert-detail">Validates comprehensive technical knowledge in developing, deploying, securing, and debugging cloud-based applications on AWS.</p>
+            <div class="cert-credential-id">
+              <span>Credential ID:</span>
+              <code>05dcbc6ce4b842f4ae1fc69ce2797767</code>
+              <button class="copy-btn" data-clipboard="05dcbc6ce4b842f4ae1fc69ce2797767" title="Copy ID">📋</button>
+            </div>
+          </div>
+
+          <!-- SAP Gen AI -->
+          <div class="cert-card">
+            <div class="cert-card-header">
+              <div class="cert-issuer-badge sap-badge">SAP</div>
+              <span class="cert-date">2026</span>
+            </div>
+            <h3 class="cert-name">SAP Certified — SAP Generative AI Developer</h3>
+            <div class="cert-org">SAP SE</div>
+            <p class="cert-detail">Proves competencies in developing generative AI applications, prompt engineering, fine-tuning, and integrating enterprise AI architectures on SAP BTP.</p>
+          </div>
+
+          <!-- SAP ABAP Back-End -->
+          <div class="cert-card">
+            <div class="cert-card-header">
+              <div class="cert-issuer-badge sap-badge">SAP</div>
+              <span class="cert-date">Issued April 2026</span>
+            </div>
+            <h3 class="cert-name">SAP Certified — Back-End Developer, ABAP Cloud</h3>
+            <div class="cert-org">SAP SE</div>
+            <p class="cert-detail">Validates cloud-native back-end enterprise architectures, RESTful Application Programming (RAP), and secure cloud APIs.</p>
+          </div>
+
+          <!-- Salesforce Agentforce -->
+          <div class="cert-card">
+            <div class="cert-card-header">
+              <div class="cert-issuer-badge salesforce-badge">Salesforce</div>
+              <span class="cert-date">2025</span>
+            </div>
+            <h3 class="cert-name">Agentforce Specialist — Global Certification</h3>
+            <div class="cert-org">Salesforce</div>
+            <p class="cert-detail">Demonstrated mastery in deploying autonomous AI agents, multi-agent reasoning, trust layer guardrails, and enterprise workflow automation.</p>
+          </div>
+
+          <!-- NPTEL IIT -->
+          <div class="cert-card">
+            <div class="cert-card-header">
+              <div class="cert-issuer-badge nptel-badge">IIT KGP</div>
+              <span class="cert-date">2024</span>
+            </div>
+            <h3 class="cert-name">NPTEL Machine Learning Certification</h3>
+            <div class="cert-org">Indian Institute of Technology, Kharagpur</div>
+            <p class="cert-detail">Comprehensive mathematical and algorithmic foundation across supervised learning, optimization, neural networks, and clustering.</p>
+            <div class="cert-credential-id">
+              <span>Credential ID:</span>
+              <code>NPTEL23CS74S43880055</code>
+              <button class="copy-btn" data-clipboard="NPTEL23CS74S43880055" title="Copy ID">📋</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH & ACHIEVEMENTS -->
+    <section id="achievements" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// Research &amp; Recognition</span>
+          <h2 class="section-title">Research Papers &amp; Achievements</h2>
+          <p class="section-subtitle">Conference presentations, competitive hackathons, and research internships.</p>
+        </div>
+
+        <div class="achievements-container">
+          <!-- Featured Research Paper -->
+          <div class="paper-banner">
+            <div class="paper-header">
+              <span class="pill pill-gold">IEEE International Conference Paper</span>
+              <span class="paper-date">September 2026 • NIT Raipur</span>
+            </div>
+            <h3 class="paper-title">‘Intelligent Blood Sugar Prediction Using Ensemble Machine Learning Approaches’</h3>
+            <p class="paper-venue">
+              Presented at the <strong>4th IEEE International Conference on Ambient Intelligence in Health Care (ICAIHC-2026)</strong>, hosted by the National Institute of Technology (NIT), Raipur.
+            </p>
+            <p class="paper-abstract">
+              Introduced an interpretable hybrid ensemble algorithm integrating Random Forest, Extreme Gradient Boosting (XGBoost), and Support Vector Machines with soft-voting aggregation. Implemented SMOTE balancing and demonstrated SHAP feature contribution ranking, achieving 97.43% prediction accuracy over 100,000 patient data points.
+            </p>
+            <div class="paper-tags">
+              <span>Ensemble Learning</span><span>Soft-Voting</span><span>SHAP Interpretability</span><span>Healthcare AI</span><span>SMOTE</span>
+            </div>
+          </div>
+
+          <!-- Achievements List -->
+          <div class="achievements-grid">
+            <div class="achievement-card">
+              <div class="achieve-icon">🏆</div>
+              <div class="achieve-content">
+                <h4>2nd Place in Poster Presentation</h4>
+                <div class="achieve-meta">IEEE Symposium on Computational Intelligence (NSCIS '26) • March 2026</div>
+                <p>Awarded 2nd prize across national universities for presenting research on interpretable predictive analytics in computational intelligence.</p>
+              </div>
+            </div>
+
+            <div class="achievement-card">
+              <div class="achieve-icon">🏭</div>
+              <div class="achieve-content">
+                <h4>AI &amp; IoT Data Analytics Internship</h4>
+                <div class="achieve-meta">TANSAM, TIDEL Park, Chennai (TIDCO) • September 2025</div>
+                <p>Selected for advanced industrial manufacturing analytics program at Tamil Nadu Smart and Advanced Manufacturing Centre, analyzing IoT telemetry streams.</p>
+              </div>
+            </div>
+
+            <div class="achievement-card">
+              <div class="achieve-icon">💡</div>
+              <div class="achieve-content">
+                <h4>Smart India Hackathon (SIH Internal Edition)</h4>
+                <div class="achieve-meta">Directorate of Entrepreneurship &amp; Innovation, SRMIST • September 2025</div>
+                <p>Qualified through internal rounds presenting software solutions addressing national public infrastructure automation.</p>
+              </div>
+            </div>
+
+            <div class="achievement-card">
+              <div class="achieve-icon">🎯</div>
+              <div class="achieve-content">
+                <h4>Triple Event Competitor at NSCIS '26</h4>
+                <div class="achieve-meta">SRM Institute of Science and Technology • March 2026</div>
+                <p>Participated in Idea Pitch, Tech Quiz Carnival, and Emoji Story algorithmic challenges showcasing versatile technical acumen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE TERMINAL SECTION -->
+    <section id="terminal" class="section terminal-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// Developer CLI</span>
+          <h2 class="section-title">Interactive Terminal</h2>
+          <p class="section-subtitle">Interact with Parthasarathi's portfolio through an authentic command-line shell.</p>
+        </div>
+
+        <div class="terminal-window">
+          <div class="terminal-bar">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">parthu@portfolio-v1: ~ (zsh)</div>
+            <div class="terminal-actions">
+              <button id="clear-term-btn" class="term-action-btn">Clear</button>
+            </div>
+          </div>
+
+          <div class="terminal-content" id="terminal-screen">
+            <div class="terminal-welcome">
+              Welcome to Parthasarathi's interactive CLI environment! Type <span class="term-cmd-highlight">help</span> to view available commands, or click any suggestion below.
+            </div>
+            <div class="terminal-quick-buttons">
+              <button class="term-chip" data-cmd="help">help</button>
+              <button class="term-chip" data-cmd="skills">skills</button>
+              <button class="term-chip" data-cmd="projects">projects</button>
+              <button class="term-chip" data-cmd="certs">certs</button>
+              <button class="term-chip" data-cmd="education">education</button>
+              <button class="term-chip" data-cmd="contact">contact</button>
+              <button class="term-chip" data-cmd="cat resume.txt">cat resume.txt</button>
+            </div>
+            <div id="terminal-history"></div>
+            <div class="terminal-prompt-line">
+              <span class="prompt-user">parthu@portfolio</span>:<span class="prompt-dir">~</span>$ 
+              <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="Type command here..." autofocus>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// Get In Touch</span>
+          <h2 class="section-title">Let's Connect &amp; Collaborate</h2>
+          <p class="section-subtitle">Interested in hiring me, discussing AI/ML research, or collaborating on a project? Reach out anytime!</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-panel">
+            <h3 class="card-heading">Direct Channels</h3>
+            <p>
+              I am actively seeking software engineering internships, AI/ML research opportunities, and full-time software developer roles. My inbox is always open!
+            </p>
+
+            <div class="contact-card-list">
+              <!-- Email Card -->
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="contact-detail">
+                  <span class="label">Email Address</span>
+                  <a href="mailto:k7sarathi@gmail.com" class="val">k7sarathi@gmail.com</a>
+                </div>
+                <button class="copy-btn" data-clipboard="k7sarathi@gmail.com" title="Copy Email">Copy</button>
+              </div>
+
+              <!-- Phone Card -->
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div class="contact-detail">
+                  <span class="label">Phone / WhatsApp</span>
+                  <a href="tel:+917396582230" class="val">+91 73965 82230</a>
+                </div>
+                <button class="copy-btn" data-clipboard="+917396582230" title="Copy Phone">Copy</button>
+              </div>
+
+              <!-- LinkedIn Card -->
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </div>
+                <div class="contact-detail">
+                  <span class="label">LinkedIn</span>
+                  <a href="https://linkedin.com/in/parthasarathi-k-srm" target="_blank" rel="noopener noreferrer" class="val">in/parthasarathi-k-srm</a>
+                </div>
+                <a href="https://linkedin.com/in/parthasarathi-k-srm" target="_blank" rel="noopener noreferrer" class="link-btn">Visit</a>
+              </div>
+
+              <!-- GitHub Card -->
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </div>
+                <div class="contact-detail">
+                  <span class="label">GitHub</span>
+                  <a href="https://github.com/Parthu555" target="_blank" rel="noopener noreferrer" class="val">github.com/Parthu555</a>
+                </div>
+                <a href="https://github.com/Parthu555" target="_blank" rel="noopener noreferrer" class="link-btn">Visit</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-panel">
+            <h3 class="card-heading">Send a Direct Message</h3>
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Your Name</label>
+                  <input type="text" id="contact-name" name="name" required placeholder="e.g. Alex Mercer">
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Email Address</label>
+                  <input type="email" id="contact-email" name="email" required placeholder="alex@company.com">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject" name="subject" required placeholder="Project Collaboration / Interview Opportunity">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="5" required placeholder="Hi Parthasarathi, I saw your DeepCare and AeroHeal projects and would love to connect..."></textarea>
+              </div>
+
+              <button type="submit" id="contact-submit-btn" class="btn btn-primary btn-block">
+                <span>Send Message</span>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+              <div id="form-feedback" class="form-feedback"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-brand">&lt;Parthasarathi.ai /&gt;</div>
+        <p>Architecting robust Machine Learning, Reinforcement Learning, and Cloud Systems.</p>
+        <p class="copyright">© 2026 K. Parthasarathi. SRM Institute of Science &amp; Technology.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Back to Top ↑</a>
+        <a href="https://github.com/Parthu555" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/parthasarathi-k-srm" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://vercel.com/k7sarathi-4798s-projects" target="_blank" rel="noopener noreferrer">Vercel Deployments</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- RESUME MODAL -->
+  <div id="resume-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="resume-backdrop"></div>
+    <div class="modal-dialog modal-lg">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <h3 class="modal-title">K. Parthasarathi — Curriculum Vitae</h3>
+          <span class="pill pill-success">Verified Resume</span>
+        </div>
+        <div class="modal-actions">
+          <button id="print-resume-btn" class="btn btn-ghost btn-sm" title="Print Resume">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>Print</span>
+          </button>
+          <button id="close-resume-btn" class="modal-close" aria-label="Close modal">&times;</button>
+        </div>
+      </div>
+      <div class="modal-body resume-body" id="resume-printable-area">
+        <div class="resume-sheet">
+          <div class="resume-header">
+            <h1>K. PARTHASARATHI</h1>
+            <div class="resume-tagline">B.Tech CSE (AI &amp; ML) — SRM Institute of Science and Technology, Kattankulathur</div>
+            <div class="resume-sub">Expected Graduation: 2027 &nbsp;|&nbsp; <strong>CGPA: 8.65</strong></div>
+            <div class="resume-contact-bar">
+              <span>+91 73965 82230</span> • 
+              <a href="mailto:k7sarathi@gmail.com">k7sarathi@gmail.com</a> • 
+              <a href="https://linkedin.com/in/parthasarathi-k-srm" target="_blank">linkedin.com/in/parthasarathi-k-srm</a> • 
+              <a href="https://github.com/Parthu555" target="_blank">github.com/Parthu555</a>
+            </div>
+          </div>
+
+          <div class="resume-section">
+            <h4 class="resume-sec-title">PROFESSIONAL SUMMARY</h4>
+            <p>Computer Science student specialising in Artificial Intelligence and Machine Learning with a strong foundation in Data Structures, Algorithms, and Cloud Computing. Experienced in building end-to-end ML systems, reinforcement learning pipelines, and cloud-deployed applications using Python, PyTorch, and AWS. Interested in solving real-world problems through scalable, interpretable, and efficient AI systems.</p>
+          </div>
+
+          <div class="resume-section">
+            <h4 class="resume-sec-title">EDUCATION</h4>
+            <div class="resume-item">
+              <div class="item-head"><strong>B.Tech, Computer Science Engineering (AI &amp; ML)</strong> <span>2023 – 2027</span></div>
+              <div class="item-sub">SRM Institute of Science &amp; Technology, Kattankulathur | <strong>CGPA: 8.65</strong></div>
+            </div>
+            <div class="resume-item">
+              <div class="item-head"><strong>Grade XII – TS BIE</strong> <span>2022 – 2023</span></div>
+              <div class="item-sub">Page Junior College, Kompally | <strong>97.7%</strong></div>
+            </div>
+            <div class="resume-item">
+              <div class="item-head"><strong>Grade X – TS SSC</strong> <span>2020 – 2021</span></div>
+              <div class="item-sub">Trinity Model Secondary School, Peddapelli | <strong>100.0%</strong></div>
+            </div>
+          </div>
+
+          <div class="resume-section">
+            <h4 class="resume-sec-title">TECHNICAL SKILLS</h4>
+            <p><strong>Programming:</strong> Python, C, C++</p>
+            <p><strong>AI / ML:</strong> Reinforcement Learning (PPO), Supervised &amp; Unsupervised Learning, Ensemble Methods (Random Forest, XGBoost, SVM), SHAP Explainability</p>
+            <p><strong>Frameworks &amp; Libraries:</strong> PyTorch, Stable-Baselines3, Scikit-learn, Pandas, NumPy, Streamlit, Flask, FastAPI</p>
+            <p><strong>Cloud &amp; DevOps:</strong> AWS (EC2, S3, IAM, ALB, VPC), Docker, Terraform, GitHub Actions</p>
+            <p><strong>Web Technologies:</strong> HTML, CSS, JavaScript, React, TypeScript, MySQL, PostgreSQL</p>
+            <p><strong>Developer Tools:</strong> Git, GitHub, VS Code</p>
+          </div>
+
+          <div class="resume-section">
+            <h4 class="resume-sec-title">PROJECTS</h4>
+            
+            <div class="resume-project">
+              <div class="item-head"><strong>DeepCare — Cloud-Based Healthcare Platform with AI Chest X-ray Analysis</strong></div>
+              <div class="item-sub">Tech Stack: Python, FastAPI, React, TypeScript, PostgreSQL, PyTorch, AWS, Terraform, Docker</div>
+              <ul>
+                <li>Developed a full-stack healthcare platform with separate patient, doctor, and admin portals, where doctors upload chest X-rays, run AI analysis, and issue signed PDF reports that patients can view.</li>
+                <li>Integrated a DenseNet-121 model to detect 14 chest pathologies (NIH ChestX-ray14), using Grad-CAM heatmaps to explain predictions, and secured the FastAPI backend with JWT role-based access, Argon2 hashing, and audit logging of patient data access.</li>
+                <li>Deployed on AWS using Terraform (VPC, EC2 Auto Scaling with ALB, RDS PostgreSQL, KMS-encrypted S3, CloudWatch monitoring), with Docker containers and a GitHub Actions CI/CD pipeline.</li>
+              </ul>
+            </div>
+
+            <div class="resume-project">
+              <div class="item-head"><strong>AeroHeal — Autonomous Server Remediation via Reinforcement Learning</strong></div>
+              <div class="item-sub">Tech Stack: Python, PyTorch, Stable-Baselines3, OpenAI Gym, PPO Algorithm</div>
+              <ul>
+                <li>Architected an end-to-end self-healing infrastructure pipeline using PPO to autonomously monitor 4-dimensional server telemetry (CPU, Memory, Latency) and execute proactive remediation before system failure.</li>
+                <li>Devised a custom simulation environment to process continuous streams of stochastic system data, optimising the system to prioritise proactive intervention over reactive crash recovery.</li>
+                <li>Evaluated 300,000 steps of system telemetry while maintaining strict SLA constraints without manual threshold engineering.</li>
+              </ul>
+            </div>
+
+            <div class="resume-project">
+              <div class="item-head"><strong>RAG-Based Intelligent Document Assistant</strong></div>
+              <div class="item-sub">Tech Stack: Python, LangChain, OpenAI API, FAISS, Streamlit</div>
+              <ul>
+                <li>Developed a Retrieval-Augmented Generation (RAG) system capable of answering queries from large PDF datasets with 95% contextual accuracy.</li>
+                <li>Implemented end-to-end Python pipelines for data ingestion, vectorization, and querying using FAISS semantic search.</li>
+                <li>Built a Streamlit frontend to visualize retrieved document chunks and generative answers.</li>
+              </ul>
+            </div>
+
+            <div class="resume-project">
+              <div class="item-head"><strong>DiabetaNet — Diabetes Prediction &amp; Explainability System</strong></div>
+              <div class="item-sub">Tech Stack: Python, Scikit-learn, XGBoost, SHAP, SMOTE, Streamlit</div>
+              <ul>
+                <li>Built a hybrid ensemble ML system combining Random Forest, XGBoost, and SVM using soft-voting to achieve 97.43% accuracy on 100,000 patient records.</li>
+                <li>Implemented SMOTE for class balancing and Z-score normalisation; applied SHAP for model interpretability and feature importance visualisation.</li>
+              </ul>
+            </div>
+
+            <div class="resume-project">
+              <div class="item-head"><strong>AI-Based Exam Malpractice Detection System — FastAPI + Computer Vision</strong></div>
+              <ul>
+                <li>Designed and built a FastAPI backend exposing REST endpoints for real-time video ingestion, session management, and alert delivery in an online exam proctoring system.</li>
+                <li>Integrated OpenCV-based computer vision for real-time monitoring, detecting and flagging suspicious activity during live exam sessions.</li>
+              </ul>
+            </div>
+
+            <div class="resume-project">
+              <div class="item-head"><strong>AI Chatbot Deployment on AWS</strong></div>
+              <div class="item-sub">Tech Stack: AWS EC2, S3, IAM</div>
+              <ul>
+                <li>Deployed an AI chatbot on an Amazon EC2 instance for scalable, cloud-hosted interactive usage.</li>
+                <li>Configured S3 buckets for file storage and IAM roles for fine-grained access control.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="resume-section">
+            <h4 class="resume-sec-title">CERTIFICATIONS</h4>
+            <p>• <strong>AWS Certified Developer – Associate</strong> | Amazon Web Services | April 2026 | ID: 05dcbc6ce4b842f4ae1fc69ce2797767</p>
+            <p>• <strong>SAP Certified – SAP Generative AI Developer</strong> | SAP | 2026</p>
+            <p>• <strong>SAP Certified – Back-End Developer, ABAP Cloud</strong> | SAP | Issued April 2026</p>
+            <p>• <strong>Agentforce Specialist – Global Certification</strong> | Salesforce | 2025</p>
+            <p>• <strong>NPTEL Machine Learning Certification</strong> | IIT Kharagpur | 2024 | ID: NPTEL23CS74S43880055</p>
+          </div>
+
+          <div class="resume-section">
+            <h4 class="resume-sec-title">ACHIEVEMENTS &amp; ACTIVITIES</h4>
+            <p>• <strong>Completed Internship Programme on AI and IoT Data Analytics</strong> at TANSAM, TIDEL Park, Chennai (TIDCO) | Sep 2025</p>
+            <p>• <strong>Presented paper 'Intelligent Blood Sugar Prediction Using Ensemble Machine Learning Approaches'</strong> at the 4th IEEE International Conference on Ambient Intelligence in Health Care (ICAIHC-2026), NIT Raipur | Sep 2026</p>
+            <p>• <strong>Won 2nd Place in Poster Presentation</strong>, IEEE Symposium on Computational Intelligence (NSCIS ’26) | March 2026</p>
+            <p>• <strong>Participated in Smart India Hackathon (Internal Edition)</strong>, SRMIST | September 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT DETAIL MODAL -->
+  <div id="project-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="project-backdrop"></div>
+    <div class="modal-dialog modal-md">
+      <div class="modal-header">
+        <h3 class="modal-title" id="pm-title">Project Title</h3>
+        <button id="close-project-modal-btn" class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="pm-body">
+        <!-- Injected via JavaScript -->
+      </div>
+      <div class="modal-footer" id="pm-footer">
+        <button id="close-pm-btn" class="btn btn-secondary btn-sm">Close</button>
+        <a id="pm-github-btn" href="https://github.com/Parthu555" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">View on GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

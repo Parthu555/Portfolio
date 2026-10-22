@@ -1,0 +1,23 @@
+{
+  "name": "parthasarathi-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of K. Parthasarathi - AI & ML Engineer | Full-Stack & Cloud Developer",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "portfolio",
+    "parthasarathi",
+    "ai",
+    "machine-learning",
+    "deep-learning",
+    "reinforcement-learning",
+    "aws",
+    "fastapi",
+    "react"
+  ],
+  "author": "K. Parthasarathi <k7sarathi@gmail.com>",
+  "license": "MIT"
+}
